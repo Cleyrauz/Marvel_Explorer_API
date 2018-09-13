@@ -5,8 +5,7 @@ const CharacterList = (props) =>{
   const charList = props.characters.map(character => {
     return <li key={character.id}>
       <Character
-        name={character.name}
-        image={character.thumbnail.path +"."+character.thumbnail.extension} />
+        character={character} />
       </li>
   })
 

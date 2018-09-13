@@ -49,6 +49,8 @@ handleInputChange = () => {
     })
   };
 
+ 
+
 render(){
    return(
      <React.Fragment>
@@ -65,6 +67,5 @@ render(){
  }
 
 };
-
 
 export default CharacterContainer;

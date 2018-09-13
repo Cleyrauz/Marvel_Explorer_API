@@ -1,12 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 const Character = (props) => {
-  if(!props.name){
+  if(!props.character){
     return null;
   }
   return (<React.Fragment>
-           <p>Name: {props.name}</p>
-           <img src={props.image} className = "image" alt="Character image" width="300" height="400"/>
+           <p><Link to={'/'+props.character.id}>{props.character.name}</Link></p>
+           <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image" 
+           width="300" height="400"/>
         </React.Fragment>
         )
 }
