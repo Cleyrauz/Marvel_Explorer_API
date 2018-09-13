@@ -4,6 +4,7 @@ import App from './App';
 import CharacterContainer from './containers/CharacterContainer';
 import CharacterByIdContainer from './containers/CharacterByIdContainer';
 
+
 export default(
 <Route path="/" component={App}>
     <IndexRoute component = {CharacterContainer} />
