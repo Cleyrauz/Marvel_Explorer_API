@@ -6,7 +6,7 @@ const Character = (props) => {
   }
   return (<React.Fragment>
            <p>Name: {props.name}</p>
-           <p>Bio: {props.description}</p>
+           <img src={props.image} className = "image" alt="Character image" width="300" height="400"/>
         </React.Fragment>
         )
 }

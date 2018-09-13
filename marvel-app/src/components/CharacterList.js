@@ -6,7 +6,7 @@ const CharacterList = (props) =>{
     return <li key={character.id}>
       <Character
         name={character.name}
-        description={character.description} />
+        image={character.thumbnail.path +"."+character.thumbnail.extension} />
       </li>
   })
 

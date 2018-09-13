@@ -31,7 +31,6 @@ componentDidMount(){
     .catch(err => console.log(err));
   };
 
-
 getHash() {
       let timestamp = new Date().getTime();
       let md5 = CryptoJS.MD5(timestamp + PRIVATE_KEY + PUBLIC_KEY).toString();
