@@ -6,8 +6,8 @@ const Character = (props) => {
     return null;
   }
   return (<React.Fragment>
-           <p><Link to={'/'+props.character.id}>{props.character.name}</Link></p>
-           <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image" 
+           <p><Link to={'/character/'+props.character.id}>{props.character.name}</Link></p>
+           <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image"
            width="300" height="400"/>
         </React.Fragment>
         )
