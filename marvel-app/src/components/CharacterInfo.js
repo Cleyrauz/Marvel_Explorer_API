@@ -15,6 +15,10 @@ const CharacterInfo = (props) => {
            {
              displayComics(props.character.comics.items)
            }
+           <p> Events </p>
+           {
+             displayEvents(props.character.events.items)
+           }
         </React.Fragment>
         )
 }
@@ -30,5 +34,18 @@ function displayComics(comics) {
         )
     })
 }
+
+function displayEvents(events) {
+    return events.map(function (event) {
+        return (
+            <div className="row">
+                <div className="col-md-1">
+                    {event.name}
+                </div>
+            </div>
+        )
+    })
+}
+
 
 export default CharacterInfo;
