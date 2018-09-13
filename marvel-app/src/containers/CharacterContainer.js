@@ -11,9 +11,9 @@ class CharacterContainer extends Component{
   constructor(props){
     super(props)
     this.state = {
-      characters:[]
+      characters:[],
+      query: ''
     };
-
 }
 
 componentDidMount(){
@@ -31,29 +31,41 @@ componentDidMount(){
     .catch(err => console.log(err));
   };
 
-// loadAPIFunction(characterName){
-//       let url = characterName ? API_BASE_URL + 'characters?nameStartsWith=' + characterName + '&' + this.getHash() : API_BASE_URL + 'characters?nameStartsWith=Spider-man&' + this.getHash();
-//       fetch(url)
-//       .then(response => response.json())
-//       .then(events => this.setState({events: events}))
-//       .catch(err => console.log(err));
-//     }
 
 getHash() {
       let timestamp = new Date().getTime();
       let md5 = CryptoJS.MD5(timestamp + PRIVATE_KEY + PUBLIC_KEY).toString();
       return "ts=" + timestamp + "&apikey=" + PUBLIC_KEY + "&hash=" + md5;
-    }
+    };
 
-    render(){
+handleInputChange = () => {
+    this.setState({
+      query: this.search.value
+    }, () => {
+      if (this.state.query && this.state.query.length > 1) {
+        if (this.state.query.length % 2 === 0) {
+          this.loadAPIFunction(this.state.query)
+        }
+      }
+    })
+  };
+
+render(){
    return(
      <React.Fragment>
+       <form>
+         <input
+           placeholder="Search for a character..."
+           ref={input => this.search = input}
+           onChange={this.handleInputChange} />
+           <p>{this.state.query}</p>
+       </form>
        <CharacterList characters = {this.state.characters}/>
      </React.Fragment>
    )
  }
 
-  }
+};
 
 
 export default CharacterContainer;
