@@ -15,12 +15,12 @@ const CharacterInfo = (props) => {
            </div>
            <div className="charinfo-container">
            <h2> Comics </h2>
-         </div>
+          </div>
            {
-             displayComics(props.character.comics.items)
+            displayComics(props.character.comics.items)
            }
            <div className="charinfo-container">
-           <h2> Events </h2>
+             <h2> Events </h2>
           </div>
            {
              displayEvents(props.character.events.items)
@@ -30,6 +30,7 @@ const CharacterInfo = (props) => {
 }
 
 function displayComics(comics) {
+  if(comics.length > 0) {
     return comics.map(function (comic) {
         return (
             <div className="row">
@@ -45,9 +46,13 @@ function displayComics(comics) {
             </div>
         )
     })
+  } else {
+    <p> This character doesn't have comics. </p>
+  }
 }
 
 function displayEvents(events) {
+  if(events.length > 0) {
     return events.map(function (event) {
         return (
             <div className="row">
@@ -58,12 +63,16 @@ function displayEvents(events) {
                         <th>{event.name}</th>
                       </tr>
                     </tbody>
-                    </table>
+                  </table>
                 </div>
             </div>
         )
-    })
+      })
+    } else {
+      return (
+        <p> This character doesn't have events. </p>
+      )
+    }
 }
-
 
 export default CharacterInfo;
