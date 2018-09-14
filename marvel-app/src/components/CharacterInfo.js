@@ -44,8 +44,11 @@ function displayBio(bio) {
 }
 
 function displayComics(comics) {
+  let max_comics = 20;
   if(comics.length > 0) {
-    return comics.map(function (comic) {
+    return comics.map(function (comic, index) {
+      index++;
+      if(index <= max_comics){
         return (
             <div className="row">
               <div className="col-md-1">
@@ -59,6 +62,7 @@ function displayComics(comics) {
               </div>
             </div>
         )
+      }
     })
   } else {
     return (
@@ -68,8 +72,11 @@ function displayComics(comics) {
 }
 
 function displayEvents(events) {
+  let max_events = 10;
   if(events.length > 0) {
-    return events.map(function (event) {
+    return events.map(function (event, index) {
+      index++;
+      if(index <= max_events){
         return (
             <div className="row">
                 <div className="col-md-1">
@@ -82,7 +89,7 @@ function displayEvents(events) {
                   </table>
                 </div>
             </div>
-        )
+        )}
       })
     } else {
       return (
