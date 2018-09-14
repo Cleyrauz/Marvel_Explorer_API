@@ -38,7 +38,7 @@ getHash() {
   render(){
     return(
       <React.Fragment>
-     <p> Character Info </p>
+     <p> Character Information </p>
      <CharacterInfo character={this.state.character[0]} />
    </React.Fragment>
     )

@@ -8,9 +8,11 @@ const Character = (props) => {
   }
   return (<React.Fragment>
     <div className="char-container">
-           <p><Link to={'/character/'+props.character.id}>{props.character.name}</Link></p>
-           <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image"
-           width="300" height="400"/>
+           <p>{props.character.name}</p>
+           <Link to={'/character/'+props.character.id}>
+           <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension}
+             className = "image" alt="Character image"
+           width="300" height="400"/></Link>
     </div>
         </React.Fragment>
         )

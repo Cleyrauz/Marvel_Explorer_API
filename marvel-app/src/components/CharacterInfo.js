@@ -7,9 +7,11 @@ const CharacterInfo = (props) => {
   }
 
   return (<React.Fragment>
+           <div className="pic-container">
            <p>Name: {props.character.name}</p>
            <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image"
            width="150" height="200"/>
+           </div>
              <div className="bio-container">
              {
               displayBio(props.character.description)
