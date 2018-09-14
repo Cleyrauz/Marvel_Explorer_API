@@ -31,3 +31,13 @@ table, th, td {
   border-bottom: 1px solid #ddd;
   padding: 15px;
 }
+
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

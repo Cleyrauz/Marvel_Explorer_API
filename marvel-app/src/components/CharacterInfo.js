@@ -10,12 +10,18 @@ const CharacterInfo = (props) => {
            <p>Name: {props.character.name}</p>
            <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image"
            width="150" height="200"/>
+           <div className="bio-container">
            <p>Bio: {props.character.description}</p>
-           <p>Top 20 comics </p>
+           </div>
+           <div className="charinfo-container">
+           <h2> Comics </h2>
+         </div>
            {
              displayComics(props.character.comics.items)
            }
-           <p> Events </p>
+           <div className="charinfo-container">
+           <h2> Events </h2>
+          </div>
            {
              displayEvents(props.character.events.items)
            }
@@ -27,9 +33,15 @@ function displayComics(comics) {
     return comics.map(function (comic) {
         return (
             <div className="row">
-                <div className="col-md-1">
-                    {comic.name}
-                </div>
+              <div className="col-md-1">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>{comic.name}</th>
+                    </tr>
+                  </tbody>
+                  </table>
+              </div>
             </div>
         )
     })
@@ -40,7 +52,13 @@ function displayEvents(events) {
         return (
             <div className="row">
                 <div className="col-md-1">
-                    {event.name}
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>{event.name}</th>
+                      </tr>
+                    </tbody>
+                    </table>
                 </div>
             </div>
         )

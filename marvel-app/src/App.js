@@ -7,7 +7,7 @@ class App extends Component {
      return (
        <div>
          <NavBar/>
-         <h3>MARVEL character explorer</h3>
+         <h1>MARVEL character explorer</h1>
         {this.props.children}
       </div>
      );
