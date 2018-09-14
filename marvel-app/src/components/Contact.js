@@ -5,13 +5,13 @@ const Contact = () => (
 
 <React.Fragment>
     <div className="contact-info">
-      <h3>The Creator</h3>
+      <h2>The Author</h2>
       <table>
         <tbody>
           <tr>
             <th>Details</th>
             <th><img src="email_logo.png" height="50" width="50" alt="email logo"/></th>
-            <th><img src="git_logo.jpg" height="50" width="50" alt="github logo"/></th>
+            <th><img src="Github-Logo.png" height="50" width="50" alt="github logo"/></th>
           </tr>
           <tr>
             <td>Cleyra Uzcategui</td>
