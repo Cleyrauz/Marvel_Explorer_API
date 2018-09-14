@@ -9,7 +9,7 @@ const CharacterInfo = (props) => {
   return (<React.Fragment>
            <p>Name: {props.character.name}</p>
            <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image"
-           width="300" height="400"/>
+           width="150" height="200"/>
            <p>Bio: {props.character.description}</p>
            <p>Top 20 comics </p>
            {

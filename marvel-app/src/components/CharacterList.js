@@ -10,7 +10,7 @@ const CharacterList = (props) =>{
   })
 
   return (
-    <div className="char-container">
+    <div className="charlist-container">
     <ol className="char-list">{charList}
     </ol>
     </div>

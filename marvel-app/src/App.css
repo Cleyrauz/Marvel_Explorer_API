@@ -26,3 +26,46 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+li {
+  display: inline-block;
+  font-size: 15px;
+  float: left;
+  text-align: center;
+}
+
+li a:hover {
+  background-color: #555;
+  color: black;
+}
+
+li a{
+  color: black;
+  text-decoration: none;
+  padding: 1.0em;
+}
+
+
+li a:active {
+  color: #eff0f2;
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+body {
+  background-color: lightgray;
+}
+
+h3{
+/* font-weight: bolder; */
+font: Garamond;
+font-family: monospace;
+font-size: 5px;
+}
