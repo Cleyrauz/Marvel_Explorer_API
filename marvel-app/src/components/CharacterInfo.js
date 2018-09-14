@@ -10,11 +10,13 @@ const CharacterInfo = (props) => {
            <p>Name: {props.character.name}</p>
            <img src={props.character.thumbnail.path +"."+props.character.thumbnail.extension} className = "image" alt="Character image"
            width="150" height="200"/>
-           <div className="bio-container">
-           <p>Bio: {props.character.description}</p>
+             <div className="bio-container">
+             {
+              displayBio(props.character.description)
+             }
            </div>
            <div className="charinfo-container">
-           <h2> Comics </h2>
+            <h2> Comics </h2>
           </div>
            {
             displayComics(props.character.comics.items)
@@ -27,6 +29,16 @@ const CharacterInfo = (props) => {
            }
         </React.Fragment>
         )
+}
+
+function displayBio(bio) {
+  if(bio.length > 0) {
+    return (bio)
+  } else {
+    return (
+      <p> This character doesn't have bio. </p>
+    )
+  }
 }
 
 function displayComics(comics) {
@@ -47,7 +59,9 @@ function displayComics(comics) {
         )
     })
   } else {
+    return (
     <p> This character doesn't have comics. </p>
+   )
   }
 }
 

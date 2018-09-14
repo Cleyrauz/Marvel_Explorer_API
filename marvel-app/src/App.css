@@ -69,4 +69,5 @@ table tbody tr th {
 .bio-container {
   padding: 25px 50px 25px;
   text-align: left;
+  display: inline-table;
 }
