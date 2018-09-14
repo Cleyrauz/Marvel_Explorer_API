@@ -55,7 +55,7 @@ function displayComics(comics) {
                 <table>
                   <tbody>
                     <tr>
-                      <th>{comic.name}</th>
+                      <th>{index+'. '+comic.name}</th>
                     </tr>
                   </tbody>
                   </table>
@@ -83,7 +83,7 @@ function displayEvents(events) {
                   <table>
                     <tbody>
                       <tr>
-                        <th>{event.name}</th>
+                        <th>{index+'. '+event.name}</th>
                       </tr>
                     </tbody>
                   </table>
