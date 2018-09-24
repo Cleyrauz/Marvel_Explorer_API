@@ -15,6 +15,4 @@ technical ability with HTML, CSS, Javascript and testing.
 
 -The ability to close the search and start again.
 
--Show your commit history 
-
-–we like to see how people work and apply a process.
+-Show your commit history –we like to see how people work and apply a process.
